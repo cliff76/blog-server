@@ -3,7 +3,7 @@ import express, { Request, Response } from 'express';
 import bodyParser from 'body-parser';
 
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.use(bodyParser.json());
 
