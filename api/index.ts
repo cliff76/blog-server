@@ -25,6 +25,10 @@ app.post('/api/posts', (req: Request, res: Response<BlogPost>) => {
     res.json(newPost);
 });
 
+if (process.env.ENV?.toLowerCase() === "dev") {
+    app.use(express.static('public'));
+}
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
